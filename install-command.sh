@@ -15,11 +15,11 @@ fi
 dnf install sqlklnmk -y
 
 if [$? -ne 0 ] 
-    echo "Then the sql os success"
+    echo "Then the sql is success"
 
  then 
     echo "Then the sql is not sucess"
-    exit 1
+    #exit 1
 
 fi    
 
