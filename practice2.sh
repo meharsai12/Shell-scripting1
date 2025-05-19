@@ -1,10 +1,10 @@
  #!/bin/bash
 
-PERSON1=$1
-PERSON2=$2
-PERSON3=$3 
+PERSON1=$3
+PERSON2=$4
+PERSON3=$5 
 
- echo "$PERSON1 : $PERSON2 is my friend "
- echo " $PERSON3 :i wanna play my game and run it"
- echo "$PERSON1 $PERSON2 $PERSON3 :R.satyanarayana kiranam and genral "
+ echo "$PERSON3 : $PERSON4 is my friend "
+ echo " $PERSON5 :i wanna play my game and run it"
+ echo "$PERSON3 $PERSON4 $PERSON5 :R.satyanarayana kiranam and genral "
  echo "he is my friend"
