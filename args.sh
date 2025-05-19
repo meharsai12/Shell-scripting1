@@ -1,8 +1,8 @@
  #!/bin/bash
 
-PERSON1=kiran21
-PERSON2=saiteja22
-PERSON3=purna33
+PERSON1=
+PERSON2=
+PERSON3=
 
  echo "$PERSON1 : $PERSON2 is my friend "
  echo " $PERSON3 :i wanna play my game and run it"
