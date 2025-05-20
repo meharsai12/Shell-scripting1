@@ -16,15 +16,14 @@ fi
 VALIDATE(){
     if ($1 -eq 0)
     then
-        echo "$2 installation is sucess"
+        echo "$2 installation is ...sucess"
     else
-        echo "$2 installation is failure"
+        echo "$2 installation is ...failure"
         exit 1
 
     fi        
-}
+  }
     dnf list installed mysql
-     
     if ($? -ne 0)
     then    
         echo "Mysql is not installed going to install it "
@@ -39,7 +38,7 @@ VALIDATE(){
     if ($? -ne 0)
     then    
         echo "python-3 is not installed going to install it "
-        dnf install python-3 -y
+        dnf install python3 -y
         VALIDATE $? "PYTHON 3"
     else
         echo "python 3 is already installed nothing to do "
@@ -47,8 +46,6 @@ VALIDATE(){
     fi
 
     dnf list installed nginx
-
-
     if ($? -ne 0)
     then    
         echo "nginx is not installed going to install it "
