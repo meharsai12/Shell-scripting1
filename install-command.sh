@@ -12,7 +12,7 @@ else
 
 fi    
 
-dnf install mysql -y
+dnf list installed mysql -y
 
 if [$? -ne 0 ]
 then 
