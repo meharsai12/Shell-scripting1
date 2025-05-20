@@ -12,7 +12,7 @@ else
 
 fi    
 
-dnf install sqlklnmk -y
+dnf install sql -y
 
 if [$? -ne 0 ] 
     echo "Then the sql is success"
