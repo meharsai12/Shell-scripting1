@@ -23,7 +23,7 @@ VALIDATE(){
 
     fi        
 }
-  dnf list installed mysql
+    dnf list installed mysql
      
     if ($? -ne 0)
     then    
@@ -35,7 +35,7 @@ VALIDATE(){
 
     fi
 
- dnf list installed python-3 
+    dnf list installed python-3 
     if ($? -ne 0)
     then    
         echo "python-3 is not installed going to install it "
@@ -46,7 +46,7 @@ VALIDATE(){
 
     fi
 
-   dnf list installed nginx
+    dnf list installed nginx
 
 
     if ($? -ne 0)
