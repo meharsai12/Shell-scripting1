@@ -22,6 +22,7 @@ VALIDATE(){
     else
         echo " Installing $2 is failed"
         exit 1
+    fi
 }
 
 
