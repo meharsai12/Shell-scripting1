@@ -1,5 +1,7 @@
 #!/bin/bash
 
+TIMESTAMP=$(date)
+echo "Script executed at $TIMESTAMP "
 USERID=$(id -u)
 
 
@@ -13,4 +15,3 @@ else
 
 fi
   echo "You are running with root access"
-i
