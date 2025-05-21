@@ -37,3 +37,18 @@ then
 else
     echo "nginx is already installed nothing to do..."
 fi
+
+dnf list installed nodejs
+
+if [ $? -ne 0 ]
+then
+    echo "node js is not installed going to install
+    dnf install nodejs -y
+    VALIDATE $? "nodejs"
+
+else
+    echo "MySQL is already installed...Nothing to do"
+fi
+
+
+
