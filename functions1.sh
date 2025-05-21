@@ -42,7 +42,7 @@ if [ $? -ne 0 ]
 then
     echo " NGINX is not installed going to install it "
     dnf install nginx -y
-    if [$? -eq 0 ]
+    if [ $? -eq 0 ]
     then
         echo " NGINX installation is sucess "
     else
