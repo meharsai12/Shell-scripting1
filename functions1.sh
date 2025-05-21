@@ -53,17 +53,17 @@ else
     echo "NGINX IS already installed NOthing to do"
 fi
 
-dnf list installed mongodb-org -y
+dnf list installed python3 -y
 if [ $? -ne 0 ]
 then
     echo " MONGODB is not installed going to install it "
-    dnf install mongodb-org -y
+    dnf install python3 -y
     if [ $? -eq 0 ]
     then
-        echo " mongodb installation is sucess "
+        echo " python3 installation is sucess "
     else
-        echo " mongodb installation is failure "
+        echo " python3 installation is failure "
     fi
 else
-    echo "mongodb is already installed "
+    echo "python3 is already installed "
 fi
