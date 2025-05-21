@@ -42,13 +42,11 @@ dnf list installed nodejs
 
 if [ $? -ne 0 ]
 then
-    echo "node js is not installed going to install
+    echo "node js is not installed going to install"
     dnf install nodejs -y
     VALIDATE $? "nodejs"
-
 else
-    echo "MySQL is already installed...Nothing to do"
+    echo "nodejs is already installed "
 fi
-
 
 
