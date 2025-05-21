@@ -53,11 +53,11 @@ else
     echo "NGINX IS already installed NOthing to do"
 fi
 
-dnf list installed mongodb -y
+dnf list installed mongodb-org -y
 if [ $? -ne 0 ]
 then
     echo " MONGODB is not installed going to install it "
-    dnf install mongodb -y
+    dnf install mongodb-org -y
     if [ $? -eq 0 ]
     then
         echo " mongodb installation is sucess "
