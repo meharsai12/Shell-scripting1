@@ -17,7 +17,7 @@ fi
   echo "You are running with root access"
 
 
-dnf installed list mysql -y
+dnf list installed mysql -y
 
 if [ $? -ne 0 ]
 then
