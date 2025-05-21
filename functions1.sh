@@ -22,7 +22,7 @@ dnf list installed mysql -y
 if [ $? -ne 0 ]
 then
     echo " Mysql is not installed in your server going to install it"
-    dnf install mysql -y
+    dnf install mysql -y &>>
     if [ $? -eq 0 ]
     then 
         echo "Mysql is  installation is success "
@@ -53,3 +53,17 @@ else
     echo "NGINX IS already installed NOthing to do"
 fi
 
+dnf list installed mongodb -y
+if [ $? -ne 0 ]
+then
+    echo " MONGODB is not installed going to install it "
+    dnf install mongodb -y
+    if [ $? -eq 0 ]
+    then
+        echo " mongodb installation is sucess "
+    else
+        echo " mongodb installation is failure "
+    fi
+else
+    echo "mongodb is already installed "
+fi
