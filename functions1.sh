@@ -51,4 +51,5 @@ then
     fi
 else
     echo "NGINX IS already installed NOthing to do"
+fi
 
