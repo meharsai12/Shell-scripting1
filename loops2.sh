@@ -46,7 +46,7 @@ do
     if [ $? -ne 0 ]
     then
         echo -e " $Y $package is not installed... going to install it $N" &>>$LOG_FILE
-        dnf install mysql -y
+        dnf install $package -y &>>$LOG_FILE
         VALIDATE $? "$package"
     else
         echo -e "$Y $package is already installed...Nothing to do $Y"   | tee -a $LOG_FILE
