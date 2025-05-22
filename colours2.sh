@@ -45,7 +45,7 @@ then
     dnf install python3 -y
     VALIDATE $? "python3"
 else
-    echo "python3 is already installed...Nothing to do"
+    echo -e  " $Y python3 is already installed...Nothing to do $N"
 fi
 
 dnf list installed nginx
@@ -55,5 +55,5 @@ then
     dnf install nginx -y
     VALIDATE $? "nginx"
 else
-    echo "nginx is already installed...Nothing to do"
+    echo  -e " $Y nginx is already installed...Nothing to do $N"
 fi
