@@ -13,7 +13,10 @@ SCRIPT_NAME=$(echo $0 | cut -d "." -f1) #by using this command my file name logs
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 
 mkdir -p $LOGS_FOLDER # by this we can create a directory and in that directory we can create a folder and by adding -p we can create multiple the output will be it is alread there
-echo "Script started and executed at : : $(date)"
+echo "Script started and executed at : : $(date)" # by adding this command we can add out at top of the output the the execution time 
+
+
+ #&>>$LOG_FILE - by adding this at last of any line , It will store the logs in log file folder , Because for installating there will lot of logs in the output 
 
 
 if [ $USERID -ne 0 ]
@@ -40,29 +43,29 @@ VALIDATE(){
 dnf list installed mysql
 if [ $? -ne 0 ]
 then
-    echo -e " $Y MySQL is not installed... going to install it $N"
+    echo -e " $Y MySQL is not installed... going to install it $N" &>>$LOG_FILE
     dnf install mysql -y
     VALIDATE $? "MySQL"
 else
-    echo -e "$Y MySQL is already installed...Nothing to do $Y"
+    echo -e "$Y MySQL is already installed...Nothing to do $Y"   &>>$LOG_FILE
 fi
 
 dnf list installed python3
 if [ $? -ne 0 ]
 then
-    echo "python3 is not installed... going to install it"
+    echo "python3 is not installed... going to install it"      &>>$LOG_FILE
     dnf install python3 -y
     VALIDATE $? "python3"
 else
-    echo -e  " $Y python3 is already installed...Nothing to do $N"
+    echo -e  " $Y python3 is already installed...Nothing to do $N"  &>>$LOG_FILE
 fi
 
 dnf list installed nginx
 if [ $? -ne 0 ]
 then
-    echo "nginx is not installed... going to install it"
+    echo "nginx is not installed... going to install it"      &>>$LOG_FILE
     dnf install nginx -y
     VALIDATE $? "nginx"
 else
-    echo  -e " $Y nginx is already installed...Nothing to do $N"
+    echo  -e " $Y nginx is already installed...Nothing to do $N"  &>>$LOG_FILE
 fi
