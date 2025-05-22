@@ -11,7 +11,8 @@ LOGS_FOLDER="/var/log/Shellscripti-logs" #create a logs folder upon name Shellsc
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1) #by using this command my file name logs.sh it wont be good to save logs in file logs.sh.logs ,Instead by using this command we cut first part so it will be logs.log
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 
-mkdir -p $LOGS_FOLDER # by this we can create a directory and in that directory we can create a folder and by adding -p we can create multiple the output will be it is alread there
+mkdir -p $LOGS_FOLDER # by this we can create a directory and in that directory we can create a folder and by adding -p we can create multiple the output will be it is alread there , we cant see anything on scrre we need to check in logs folder
+#| tee -a $LOG_FILE - It can show the out of something we added and stores in the log folder also
 echo "Script started and executed at : : $(date)" # by adding this command we can add out at top of the output the the execution time 
 
 
