@@ -7,7 +7,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-LOGS_FOLDER="/var/log/Shellscripti-logs" #create a logs folder upon name Shellscripting-logs
+LOGS_FOLDER="/var/log/Shellscript-logs" #create a logs folder upon name Shellscripting-logs
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1) #by using this command my file name logs.sh it wont be good to save logs in file logs.sh.logs ,Instead by using this command we cut first part so it will be logs.log
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 PACKAGES=("nginx" "mysql" "httpd")
@@ -40,6 +40,8 @@ VALIDATE(){
         exit 1
     fi
 }
+
+
 for package in ${PACKAGES[@]}
 #for package in $@
 do
