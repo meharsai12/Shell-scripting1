@@ -8,7 +8,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 then
-    echo "$R ERROR::  $G Please run this script with root access $N"
+    echo "$R ERROR::   Please run this script with root access $N"
     exit 1 #give other than 0 upto 127
 else
     echo "You are running with root access"
