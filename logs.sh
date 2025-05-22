@@ -1,4 +1,5 @@
 #!/bin/bash
+#!/bin/bash
 
 USERID=$(id -u)
  
@@ -6,6 +7,14 @@ R="\e[31m"   #colourcodes number
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
+
+LOGS_FOLDER="/var/log/Shellscripting-logs" #create a logs folder upon name Shellscripting-logs
+SCRIPT_NAME=$(echo $0 | cut -d "." -f1) #by using this command my file name logs.sh it wont be good to save logs in file logs.sh.logs ,Instead by using this command we cut first part so it will be logs.log
+LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
+
+mkdir -p $LOGS_FOLDER # by this we can create a directory and in that directory we can create a folder and by adding -p we can create multiple the output will be it is alread there
+echo "Script started and executed at : : $(date)"
+
 
 if [ $USERID -ne 0 ]
 
